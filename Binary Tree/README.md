@@ -27,6 +27,10 @@ Approach: Will search in the BST according the to the current value, for value g
 Approach: Will store elements in the vector everytime we move and when we reach the leaf node will calculate and add to the 
         running sum and will pop elements while moving back from the leaf node (backtracking)
 ```
+- [653. Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
+```
+Approach- Brute force: Store the inorder traversal of the tree and find the result using two pointers on the vector obtained
+```
 
 
 
