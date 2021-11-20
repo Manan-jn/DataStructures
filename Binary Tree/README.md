@@ -12,7 +12,6 @@ Approach -2: BFS traversal of the tree level by level and if we get the value be
 ```
 Approach: Traverse both the trees from root to bottom and when both of them are not NULL then add their values and
             if the root2 is NULL then return it
-
 ```
 - [897. Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)
 ```
