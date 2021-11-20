@@ -16,7 +16,7 @@ Approach: Traverse both the trees from root to bottom and when both of them are 
 ```
 - [897. Increasing Order Search Tree](https://leetcode.com/problems/increasing-order-search-tree/)
 ```
-
+Approach: Store the inorder traversal of the tree in the vector and build the seperate tree from that vector and return it
 ```
 - [700. Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)
 ```
