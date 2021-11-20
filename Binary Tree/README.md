@@ -3,7 +3,10 @@
 ### Easy 
 - [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
 ```
-
+Approach -1: Simple BST traversal of the binary tree and if we get the value between high and low will add to 
+              the sum and return sum
+Approach -2: BFS traversal of the tree level by level and if we get the value between high and low will add to
+              the sum and return sum
 ```
 - [617. Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/)
 ```
