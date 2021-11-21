@@ -29,8 +29,18 @@ Approach: Will store elements in the vector everytime we move and when we reach 
 ```
 - [653. Two Sum IV - Input is a BST](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/)
 ```
-Approach- Brute force: Store the inorder traversal of the tree and find the result using two pointers on the vector obtained
+Approach: Brute force: Store the inorder traversal of the tree and find the result using two pointers on the vector obtained
 ```
-
+- [530. Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
+```
+Approach: Brute force: Store the inorder traversal and then iterate over it to find the minimum absolute difference
+Approach 2: Iterate over the tree in inorder fashion and keep track of the prev value and the min value encountered
+            and find the minimum value in the tree
+```
+- [671. Second Minimum Node In a Binary Tree](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/)
+```
+Approach: Brute force: Store the inorder traversal of the tree inside the set stl and iterate over it to find the second min
+          element in the tree
+```
 
 
