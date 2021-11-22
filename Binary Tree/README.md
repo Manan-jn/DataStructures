@@ -43,4 +43,32 @@ Approach: Brute force: Store the inorder traversal of the tree inside the set st
           element in the tree
 ```
 
+### Medium
+- [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+```
+Approach: Brute Force: Store the BFS traversal and the last most element in every level will appear in the right side view 
+          so print the last most element in the bsf traversal (root->left->right)
+          
+Approach: Initialise a maxLevel pointer as -1 and move every level in the traversal of (root->right->left) and if we get the
+          level which is greater than the maxLevel then will print that element and update maxLevel as level
+```
+- [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+```          
+Approach -1: Set the min and max pointers for root node as INT_MIN and INT_MAX respectively and while moving to the nodes 
+          update these pointers and check if the root->val is less than the maxPointer and greater than the minPointer then 
+          return true otherwise false
+          
+Approach -2: Store the inorder traversal of the BST inside the vector and if we get the next element which is smaller than 
+            or equal to the current element then return false and break the loop
+            if(preorder[i]>=preorder[i+1]){
+                return false and break the loop
+            }
+```
+- [103. Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
+```
+Approach: Perform BFS traversal on the tree and keep a pointer 'count' and update count after every level and if we get the
+          count as even then reverse the current vector and push to the main ans otherwise just push original to the main
+```
+
+
 
