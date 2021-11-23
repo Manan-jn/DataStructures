@@ -69,6 +69,22 @@ Approach -2: Store the inorder traversal of the BST inside the vector and if we 
 Approach: Perform BFS traversal on the tree and keep a pointer 'count' and update count after every level and if we get the
           count as even then reverse the current vector and push to the main ans otherwise just push original to the main
 ```
+- [993. Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/)
+```
+Approach: Will first find the LCA of the two nodes and then we need to find the depth of each node from the node next to 
+          the leaf node and if the depth of both sides are same then they are cousins otherwise not
+           Bottom up approach: Found node will return its value and depth and will compare the depths from both sides
+```
+- [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+```
+Approach: Will store the inorder traversal of the BST and will find the kth element in the vector that will be the kth 
+          smallest element in the BST
+```
+- [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
+```
+Approach: Perform BST traversal on the tree and then update the next pointer of each node with the next node in the tree 
+          or queue
+```
 
 
 
