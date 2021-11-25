@@ -32,6 +32,7 @@ Approach: Will store elements in the vector everytime we move and when we reach 
 Approach: Brute force: Store the inorder traversal of the tree and find the result using two pointers on the vector obtained
 ```
 - [530. Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst/)
+- [783. Minimum Distance Between BST Nodes](https://leetcode.com/problems/minimum-distance-between-bst-nodes/)
 ```
 Approach: Brute force: Store the inorder traversal and then iterate over it to find the minimum absolute difference
 Approach 2: Iterate over the tree in inorder fashion and keep track of the prev value and the min value encountered
@@ -84,6 +85,17 @@ Approach: Will store the inorder traversal of the BST and will find the kth elem
 ```
 Approach: Perform BST traversal on the tree and then update the next pointer of each node with the next node in the tree 
           or queue
+```
+- [1382. Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)
+```
+Approach: Will make the node of the middle value in the preorder traversal of the tree then will call on the left and right
+          parts in the same manner
+```
+- [106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+```
+Approach: Will pick elements sequentially from the postorder traversal will make the node of it then will find the index 
+          of that element in the inorder traversal and then will make a call on the right part with (index+1) as the 
+          start and (e) as the end and with (s) and (index-1) on the left part of the root node
 ```
 
 
