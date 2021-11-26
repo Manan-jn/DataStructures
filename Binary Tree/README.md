@@ -97,6 +97,26 @@ Approach: Will pick elements sequentially from the postorder traversal will make
           of that element in the inorder traversal and then will make a call on the right part with (index+1) as the 
           start and (e) as the end and with (s) and (index-1) on the left part of the root node
 ```
-
-
+- [109. Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
+```
+Approach -1: Will store the elements of the linked list sequentially and then will find the mid point of the vector and 
+            will make the node out of that element and will call for the right child with start as (mid+1) and end as (e)
+            and left child as the start as (s) and end as (mid-1) and then again find the middle element and make the node
+            
+            In this way the tree formed will be a height balanced tree
+```
+- [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)
+```
+Approach -1: Will store each node while traversing the tree in the vector and when we reach the leaf node then we will 
+              calculate the number out of the number stored in the vector and then while moving backwards we will pop 
+              elements out of the vector
+              if the number equals the targetSum then will add that path to our answer
+```
+- [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
+```
+Approach -1: Will store each node while traversing the tree in the vector and when we reach the leaf node then we will 
+              calculate the number out of the number stored in the vector and then while moving backwards we will pop 
+              elements out of the vector
+              will maintain a running sum and add numbers into them once will reach the leaf node
+```
 
