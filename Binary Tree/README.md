@@ -120,3 +120,40 @@ Approach -1: Will store each node while traversing the tree in the vector and wh
               will maintain a running sum and add numbers into them once will reach the leaf node
 ```
 
+
+
+## Geeks for Geeks
+### Medium
+
+- [Top View of a tree](https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1)
+```
+Approach -1: Store the position of the nodes along with the node just like in the we do in the BFS
+              traversal and will iterate over the min position in the left and max position in the 
+              right to get the desired output
+              
+          If the tree is like this then 
+              1
+             / \  
+            2   3           (1,0) (2,-1),(3,1) (4,-2),(5,0),(6,0),(7,2) will be the BFS traversal
+           /\  /\
+          4  5 6 7
+```
+- [Bottom View of Binary Tree](https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1)
+```
+Approach -1: Will do the BFS Traversal of the binary tree and will assign levels to each node with
+              respect to the root node, elements moving in the right will having levels increasing
+              and levels moving left will have decreasing levels
+              Will do the BFS traversal of the tree from left to right
+              Create a map of a key and a vector of the elements and will store the elements in that
+              
+                      20
+                    /    \              If we have tree like this 
+                  8        22           (20,0) (8,-1),(22,1) (5,-2)(3,0)(4,0)(25,2) (10,-1) (14,1)
+                /   \     /   \         Store them in the map and print out the last element of each 
+              5      3   4     25       key
+                     /    \             
+                   10      14
+
+```
+
+
