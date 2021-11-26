@@ -1,4 +1,4 @@
-//Find the top view of the binary tree
+//Find the top view of the binary Tree
 // { Driver Code Starts
 //Initial Template for C++
 
