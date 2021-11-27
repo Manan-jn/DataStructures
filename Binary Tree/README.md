@@ -82,6 +82,7 @@ Approach: Will store the inorder traversal of the BST and will find the kth elem
           smallest element in the BST
 ```
 - [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
+- [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/)
 ```
 Approach: Perform BST traversal on the tree and then update the next pointer of each node with the next node in the tree 
           or queue
@@ -118,6 +119,27 @@ Approach -1: Will store each node while traversing the tree in the vector and wh
               calculate the number out of the number stored in the vector and then while moving backwards we will pop 
               elements out of the vector
               will maintain a running sum and add numbers into them once will reach the leaf node
+```
+- [513. Find Bottom Left Tree Value](https://leetcode.com/problems/find-bottom-left-tree-value/)
+```
+Approach -1: Will do the BFS traversal on the tree and when we get the next level or NULL in the queue it means the 
+            previous level is over and first element in the queue at this point will be the bottom left element...
+```
+- [1161. Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/)
+```
+Approach -1: Will do the BFS traversal and with each level will maintain its sum, maxSum and the level with the maxSum
+             Return the level after the traversal is over...
+```
+- [1339. Maximum Product of Splitted Binary Tree](https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/)
+```
+Approach -1: Will first store the total sum of the tree and then will do the DFS traversal on the tree, at every node 
+            will do the max of three posibilities, will split the tree in 3 parts by that current node. 
+            3 cases:
+            Case 1: If we take the upper part and below as one
+            Case 2: If we take left and other part
+            Case 3: If we take right and the other part
+            Will do the max of these cases at every node while moving from the bottom (BOTTOM UP TRAVERSAL)
+            Will keep returning the sum of the subtrees from the bottom nodes
 ```
 
 
