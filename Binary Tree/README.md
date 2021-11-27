@@ -155,5 +155,17 @@ Approach -1: Will do the BFS Traversal of the binary tree and will assign levels
                    10      14
 
 ```
+- [Check for Balanced Tree](https://practice.geeksforgeeks.org/problems/check-for-balanced-tree/1#)
+```
+Approach -1:  If we do compare heights of the left and right subtree at every level then it will take
+              O(N^2) time complexity which is very bad
+              
+Approach -2:  We can do bottom up approach also, in the previous case computing the height at every node
+            was taking extra "N" time complexity we can minimise by returning a pair of height and balance
+            from every node from bottom, if we get the height difference as less than 1 will make balance
+            true and return
+            This will take complexity of O(N) 
+
+```
 
 
