@@ -141,6 +141,12 @@ Approach -1: Will first store the total sum of the tree and then will do the DFS
             Will do the max of these cases at every node while moving from the bottom (BOTTOM UP TRAVERSAL)
             Will keep returning the sum of the subtrees from the bottom nodes
 ```
+- [1161. Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/)
+```
+Approach -1: Will do the BFS traversal on the complete tree and will calculate the sum everytime after the current 
+            level has ended (NULL) and will maintain a pointer to keep a track of the current level and will update it if 
+            we find some level which is having greater sum of values than the previous level
+```
 
 
 
