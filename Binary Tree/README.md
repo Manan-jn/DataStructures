@@ -154,58 +154,65 @@ Approach -1: Will store the inorder traversal of the tree along with their nodes
 ```
 - [331. Verify Preorder Serialization of a Binary Tree](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/)
 ```
-Approach -1: Will maintain a stack and will push -1 as indicator of NULL everytime we encounter a positive value and will pop
-            once when we encounter '#' and incase of poping the stack is empty then it means this preorder cannot be possible 
-            and the count of '#' should be less than the stack size at the end of the complete traversal
+Approach -1: Will maintain a stack and will push -1 as indicator of NULL everytime we encounter a positive value and 
+              will pop once when we encounter '#' and incase of poping the stack is empty then it means this preorder
+              cannot be possible and the count of '#' should be less than the stack size at the end of the complete
+              traversal
 ```
 - [508. Most Frequent Subtree Sum](https://leetcode.com/problems/most-frequent-subtree-sum/)
 ```
-Approach -1: Will return the sum everytime from the leaf node and will store that sum inside the map, will maintain the count
-              of every sum and then at last will return the sum with max counts.
+Approach -1: Will return the sum everytime from the leaf node and will store that sum inside the map, will maintain 
+              the count of every sum and then at last will return the sum with max counts.
 ```
 - [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)
 ```
-Approach -1: Will do the level order traversal BFS on the tree and store every level inside the vector and when the current 
-              level is over we will check for the maximum value and will store that value inside our answer and at the end
-              return the ans
+Approach -1: Will do the level order traversal BFS on the tree and store every level inside the vector and when 
+              the current level is over we will check for the maximum value and will store that value inside our 
+              answer and at the end return the ans
 ```
 - [1305. All Elements in Two Binary Search Trees](https://leetcode.com/problems/all-elements-in-two-binary-search-trees/)
 ```
-Approach -1: Brute Force: Will store the inorder traversal of both the trees and merge them into a single vector and then sort the result 
-              vector and return
+Approach -1: Brute Force: Will store the inorder traversal of both the trees and merge them into a single vector
+              and then sort the result vector and return
 ```
 - [1302. Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/)
 ```
-Approach -1: Will do the level order traversal BFS of the tree and will maintain the sum pointer which will store the sum of the current
-            level and at the last level our sum will store the sum of the last level so will return it in the end
+Approach -1: Will do the level order traversal BFS of the tree and will maintain the sum pointer which will store
+              the sum of the current level and at the last level our sum will store the sum of the last level 
+              so will return it in the end
 ```
 - [1379. Find a Corresponding Node of a Binary Tree in a Clone of That Tree](https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/)
 ```
-Approach -1: Will do the preorder traversal of both the trees and once we get both trees same value of the node will return the address
-             of the cloned tree in the answer
+Approach -1: Will do the preorder traversal of both the trees and once we get both trees same value of the node 
+              will return the address of the cloned tree in the answer
 ```
 - [1315. Sum of Nodes with Even-Valued Grandparent](https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/)
 ```
-Approach -1: Will do the preorder traversal of the tree and when our root value is even then will use the same technique we use to print
-            kth level in the binary tree and will use this approach to store the sum of all the nodes at that level
+Approach -1: Will do the preorder traversal of the tree and when our root value is even then will use the same 
+              technique we use to print kth level in the binary tree and will use this approach to store the 
+              sum of all the nodes at that level
 ```
 - [1104. Path In Zigzag Labelled Binary Tree](https://leetcode.com/problems/path-in-zigzag-labelled-binary-tree/)
 ```
-Approach -1: First will calculate the height of that tree based on the 'label' provided to us and then we need to calculate the difference
-            of the 'label' node from the first node in every level and will move up in every level by reducing the diff by half (diff/2)
-            Will use different formulas based on whether the height is even or odd
+Approach -1: First will calculate the height of that tree based on the 'label' provided to us and then we need 
+              to calculate the difference of the 'label' node from the first node in every level and will move 
+              up in every level by reducing the diff by half (diff/2)
+              Will use different formulas based on whether the height is even or odd
 ```
 - [101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 ```
 Approach -1: Will do the traversal starting from the left and right node in the tree 
-             Will move left in the tree corresponding to the leftNode and will be moving right corresponding to the rightNode in the tree
-             Will move right in the tree corresponding to the leftNode and will be moving left corresponding to the rightNode in the tree
+             Will move left in the tree corresponding to the leftNode and will be moving right corresponding to 
+             the rightNode in the tree
+             Will move right in the tree corresponding to the leftNode and will be moving left corresponding to 
+             the rightNode in the tree
              And at any point we found that both traversals value is not equal then will return false and break
 ```
 - [1026. Maximum Difference Between Node and Ancestor](https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/)
 ```
-Approach -1: Will store every root to leaf path and will then traverse by finding the greatest difference between nodes (O(N^2) approach)
-             and will keep a variable which will maintain the maxiumum difference encountered so far
+Approach -1: Will store every root to leaf path and will then traverse by finding the greatest difference between 
+             nodes (O(N^2) approach) and will keep a variable which will maintain the maxiumum difference 
+             encountered so far
              return that variable in the end
 ```
 
