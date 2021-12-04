@@ -1,5 +1,7 @@
 # Data Structures and algorithms
 
+<img align="right" alt="GIF" src="https://user-images.githubusercontent.com/72336990/144714222-a6ad6c1b-2f86-4899-8b68-6706ddb8a898.gif">
+
 BINARY TREE
 https://www.youtube.com/playlist?list=PL-Jc9J83PIiHYxUk8dSu2_G7MR1PaGXN4
 
