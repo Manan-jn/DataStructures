@@ -1,5 +1,6 @@
 //300. Longest Increasing Subsequence
 //Leetcode Medium DP
+
 class Solution {
 public:
     void check(vector<int>&nums,int n,vector<int>&dp,int i){
