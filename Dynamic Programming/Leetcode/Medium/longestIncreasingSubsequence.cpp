@@ -3,30 +3,48 @@
 
 class Solution {
 public:
-    void check(vector<int>&nums,int n,vector<int>&dp,int i){
-        if(i==n){
-            return;
-        }
-        int maxCount =0;
-        for(int j=i-1;j>=0;j--){
-            if(nums[i]>nums[j]){
-                maxCount  = max(maxCount,dp[j]);
+    // Method 1 --- O(N^2)
+    int checkDp1(int n,vector<int>&nums){
+        //will maintain a dp array where dp[i] represents the max length of the LIS till index i
+        vector<int>dp(n,1);
+        for(int i=0;i<n;i++){
+            //need to look back for elements
+            for(int j=0;j<i;j++){
+                if(nums[j]<nums[i]){
+                    dp[i]= max(dp[i],dp[j]+1);
+                }
             }
         }
-        dp[i]= 1+maxCount;
-        check(nums,n,dp,i+1);
-        return;
+        int lis=0;
+        for(int i=0;i<n;i++){
+            lis = max(lis,dp[i]);
+        }
+        return lis;
+    }
+
+    //Method --2 O(N^2)
+    int checkDp2(int n,vector<int>&num){
+        //will maintain a dp array where dp[i] represents teh element at which the LIS of length i ends
+        vector<int>dp(n+1,INT_MAX);
+        dp[0]= INT_MIN;
+        for(int i=0;i<n;i++){
+            int curr = num[i];
+            for(int j=0;j<n;j++){
+                if(curr<dp[j+1] && curr>dp[j]){
+                    dp[j+1]= curr;
+                }
+            }
+        }
+        int lis =0;
+        for(int i=1;i<=n;i++){
+            if(dp[i]!=INT_MAX){
+                lis =i;
+            }
+        }
+        return lis;
     }
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
-        vector<int>dp(n,0);
-        dp[0]=1;
-        int i=1;
-        check(nums,n,dp,i);
-        int ans =0;
-        for(int i=0;i<n;i++){
-            ans = max(ans,dp[i]);
-        }
-        return ans;
+        return checkDp2(n,nums); 
     }
 };
