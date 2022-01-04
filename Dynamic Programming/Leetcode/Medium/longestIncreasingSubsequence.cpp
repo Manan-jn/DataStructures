@@ -3,7 +3,8 @@
 
 class Solution {
 public:
-    // Method 1 --- O(N^2)
+
+    //Method --1 Time -- O(N^2)
     int checkDp1(int n,vector<int>&nums){
         //will maintain a dp array where dp[i] represents the max length of the LIS till index i
         vector<int>dp(n,1);
@@ -22,7 +23,7 @@ public:
         return lis;
     }
 
-    //Method --2 O(N^2)
+    //Method --2 Time -- O(N^2)
     int checkDp2(int n,vector<int>&num){
         //will maintain a dp array where dp[i] represents teh element at which the LIS of length i ends
         vector<int>dp(n+1,INT_MAX);
@@ -43,8 +44,31 @@ public:
         }
         return lis;
     }
+
+    //Method --3 Time -- O(Nlog(N))
+    int checkDp3(int n,vector<int>&num){
+        //will maintain a dp array where dp[i] represents teh element at which the LIS of length i ends
+        vector<int>dp(n+1,INT_MAX);
+        dp[0]= INT_MIN;
+        for(int i=0;i<n;i++){
+            //As the dp vector is sorted we just need to find the upper find of the element and replace it
+            int length = upper_bound(dp.begin(),dp.end(),num[i])-dp.begin();
+            if(dp[length]>num[i] && dp[length-1]<num[i]){
+                dp[length]= num[i];
+            }
+        }
+        int lis =0;
+        for(int i=1;i<=n;i++){
+            if(dp[i]!=INT_MAX){
+                lis =i;
+            }
+        }
+        return lis;
+    }
+
+    //Main function
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
-        return checkDp2(n,nums); 
+        return checkDp3(n,nums); 
     }
 };
